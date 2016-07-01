@@ -1,0 +1,51 @@
+##### ALIASES #####
+
+# Aliases
+alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
+alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
+alias cdd="cd"
+alias cd..="cd .."
+alias cdd..="cd .."
+alias k="cd .."
+alias ls="ls -Ga"
+alias ll="ls -l"
+alias la="ls -a"
+alias rm="rm -i"
+alias df="df -h"
+alias coda="open -a \"/Applications/Coda 2.app\""
+alias waf=$PWD/waf
+alias despair="telnet 216.251.47.10 4000"
+alias kl="k && ls"
+alias findn='find . -name '"${1}"''
+alias em="emacs"
+alias ql="qlmanage -p 2>/dev/null" # quick look
+alias pmo="perl ~/Programming/Perl/pmo/pmo" # pmo program
+alias pmo-ql="qlmanage -p 2>/dev/null ~/Programming/Perl/pmo/pmo.png" # see pmo graph
+alias pmo-data="emacs ~/Programming/Perl/pmo/data.dat" # see pmo data file
+alias ws="workon still_got_it"
+alias tmux-sgi="~/scripts/tmux-sgi"
+
+# Rails
+alias rserv="script/server"
+alias rs="rails server"
+alias gen="rails generate"
+alias rg="rails generate"
+alias con="rails console"
+alias scon="rails console --sandbox"
+alias rc="script/console"
+alias spec="spec spec/ -O"
+alias rat="RSPEC=true autotest"
+alias mig="rake db:migrate"
+
+# Git
+alias gb="git checkout -b"
+alias rp="script/plugin"
+alias gc="git commit -am"
+alias ga="git add ."
+alias gp="git push"
+alias gs="git status"
+
+# Python
+alias python='python3'
+alias pip='pip3'
+alias pm='python manage.py'

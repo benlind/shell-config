@@ -1,0 +1,83 @@
+##### Functions #####
+
+# 'up [string]' takes you up to a directory that matches /string/
+# [blind ~/test#trunk/lib/Test/Module/Notes]$ up trunk
+# [blind ~/test#trunk]$ 
+up () {
+    cd `perl -MCwd -e '$o=@p=split/\//,cwd;$c++while@p&&pop(@p)!~/$ARGV[0]/;print$c>=$o?".":"../"x$c' $1`
+}
+
+# Nice interactive Perl shell
+ips () {
+    echo 'This is Interactive Perl shell';
+    rlwrap -A -pgreen -S"perl> " perl -wnE'say eval()//$@';
+}
+
+# 'back 4' takes you up 4 directories.
+back ()
+{ 
+    x=0 
+    levels="" 
+    while [ $x -lt $1 ]
+        do
+        levels="${levels}../"
+        x=$[$x+1]
+    done 
+    cd $levels
+}
+
+git_branch() {
+    GIT_DIR=`git rev-parse --git-dir 2> /dev/null`
+    if [ $? == 0 ]; then
+        cut -b 17-37 < ${GIT_DIR}/HEAD
+    fi
+}
+
+short_dir ()
+{
+    if [ "$PWD" = "$HOME" ]; then
+        echo '~'
+    else
+        the_dir=`dirname "$PWD"`;
+        the_base=`basename "$PWD"`;
+        the_dir_base=`basename "$the_dir"`;
+        if [ "$the_dir_base" = '/' ]; then
+            the_dir_base="";
+        fi
+        echo "$the_dir_base/$the_base"
+    fi
+}
+
+# This unzips any archive with the correct zip program.
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)        tar xjf $1        ;;
+            *.tar.gz)         tar xzf $1        ;;
+            *.bz2)            bunzip2 $1        ;;
+            *.rar)            unrar x $1        ;;
+            *.gz)             gunzip $1         ;;
+            *.tar)            tar xf $1         ;;
+            *.tbz2)           tar xjf $1        ;;
+            *.tgz)            tar xzf $1        ;;
+            *.zip)            unzip $1          ;;
+            *.Z)              uncompress $1     ;;
+            *.7z)             7zr e $1          ;;
+            *)                echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# If `tree` isn't installed, use this custom function
+if [ -z "\${which tree}" ]; then
+  tree () {
+      find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+  }
+fi
+
+# Make a dir and cd into it
+mcd () {
+    mkdir -p "$@" && cd "$@"
+}
