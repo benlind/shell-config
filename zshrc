@@ -6,7 +6,7 @@ export ZSH=${HOME}/.oh-my-zsh
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/. Optionally, if
 # you set this to "random", it'll load a random theme each time that oh-my-zsh
 # is loaded.
-ZSH_THEME="benlind"
+ZSH_THEME="michelebologna"
 
 # Change the command execution time
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -40,17 +40,7 @@ bindkey '\ef' emacs-forward-word
 
 
 
-##### General #####
-
-# export PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:/Users/benlind/.nvm/versions/node/v5.3.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.3/bin:/usr/local/heroku/bin:/Users/benlind/.rvm/gems/ruby-2.1.5/bin:/Users/benlind/.rvm/gems/ruby-2.1.5@global/bin:/Users/benlind/.rvm/rubies/ruby-2.1.5/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/scripts:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/benlind/.rvm/bin:/Users/benlind/.rvm/bin"
-
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  . /usr/local/bin/virtualenvwrapper.sh
-fi
-
-# if [ -f ~/.virtualenvs/virtualenv-auto-activate.sh ]; then
-#   . ~/.virtualenvs/virtualenv-auto-activate.sh
-# fi
+##### General Config #####
 
 # Print fortune on new shell
 if command -v fortune >/dev/null 2>&1; then  # if fortune is a valid command
@@ -58,3 +48,25 @@ if command -v fortune >/dev/null 2>&1; then  # if fortune is a valid command
     fortune
     echo ""
 fi
+
+# ZSH doesn't support shopt, bind, or complete
+if hash shopt 2>/dev/null; then
+    shopt -s dotglob # make globs (*) include hidden files
+fi
+if hash bind 2>/dev/null; then
+    bind 'set completion-ignore-case on'
+    bind 'set show-all-if-ambiguous on'
+fi
+if hash complete 2>/dev/null; then
+    complete -d cd # cd only tab-completes directories
+    complete -F __gitc_complete gitc
+fi
+
+unsetopt nomatch  # get globs to work with `git add`
+
+
+
+# # Virtual Env Wrapper for Python
+# if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#   . /usr/local/bin/virtualenvwrapper.sh
+# fi
