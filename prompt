@@ -1,3 +1,5 @@
+-*- mode: Shell-script -*-
+
 # Most of this file is currently unused because I'm using Liquid Prompt to have
 # a shell-independent prompt (https://github.com/nojhan/liquidprompt). To
 # customize the prompt, edit ~/.config/liquidpromptrc.

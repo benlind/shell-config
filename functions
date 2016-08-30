@@ -1,3 +1,5 @@
+-*- mode: Shell-script -*-
+
 ##### Functions #####
 
 # 'up [string]' takes you up to a directory that matches /string/

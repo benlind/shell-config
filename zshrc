@@ -1,3 +1,5 @@
+-*- mode: Shell-script -*-
+
 ##### Oh-my-zsh config #####
 
 # Path to your oh-my-zsh installation.
@@ -6,7 +8,11 @@ export ZSH=${HOME}/.oh-my-zsh
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/. Optionally, if
 # you set this to "random", it'll load a random theme each time that oh-my-zsh
 # is loaded.
-ZSH_THEME="michelebologna"
+ZSH_THEME="agnoster"
+
+# Hide the “user@hostname” info when you're logged in as yourself on your local
+# machine (for agnoster theme)
+DEFAULT_USER="benlind"
 
 # Change the command execution time
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
