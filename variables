@@ -1,4 +1,4 @@
--*- mode: Shell-script -*-
+# -*- mode: Shell-script -*-
 
 export EDITOR="emacs"
 export CVSROOT="/var/lib/cvs"

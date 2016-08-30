@@ -1,4 +1,4 @@
--*- mode: Shell-script -*-
+# -*- mode: Shell-script -*-
 
 ##### Oh-my-zsh config #####
 
