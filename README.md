@@ -16,10 +16,10 @@ ln -s ~/.shell/zshrc ~/.zshrc
 
 ### ZSH Theme
 
-To get the **agnoster** theme to work correctly, you need to install the Menlo font. This font comes with [Powerline](https://github.com/powerline), and you can install just the fonts by running this:
+To get the **agnoster** theme to work correctly, you need to install the Meslo font. This font comes with [Powerline](https://github.com/powerline), and you can install just the fonts by running this:
 
 ```
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 ```
 
-Then set your terminal font to Menlo.
+Then set your terminal font to Meslo.
