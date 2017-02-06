@@ -7,14 +7,15 @@ improve as you see fit.
 
 ### Prerequisites
 
-1. Install the XCode tools.
-2. Install [homebrew](brew.sh).
-3. Install [Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html).
+1. XCode command line tools (to install, just try to run a git command)
+2. [Homebrew](brew.sh)
+3. [Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html)
+4. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ### Installing the shell configs
 
-Simply clone this project onto your hard drive and then symlink either the zshrc
-or bashrc files to your home directory.
+Clone this project onto your hard drive and then symlink either the zshrc
+or bashrc files to your home directory. *Note:* create the symlink *after* installing Oh My Zsh, otherwise OMZ will move the `~/.zshrc` symlink to `~/.zshrc.pre-oh-my-zsh`.
 
 Example for ZSH (with this project cloned into `~/.shell`):
 
