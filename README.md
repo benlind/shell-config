@@ -5,6 +5,14 @@ improve as you see fit.
 
 ## Installation
 
+### Prerequisites
+
+1. Install the XCode tools.
+2. Install [homebrew](brew.sh).
+3. Install [Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html).
+
+### Installing the shell configs
+
 Simply clone this project onto your hard drive and then symlink either the zshrc
 or bashrc files to your home directory.
 
