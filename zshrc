@@ -63,10 +63,3 @@ if hash complete 2>/dev/null; then
 fi
 
 unsetopt nomatch  # get globs to work with `git add`
-
-
-
-# # Virtual Env Wrapper for Python
-# if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-#   . /usr/local/bin/virtualenvwrapper.sh
-# fi
