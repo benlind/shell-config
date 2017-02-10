@@ -1,3 +1,5 @@
+# -*- mode: Shell-script -*-
+
 . ~/.shell/aliases
 . ~/.shell/functions
 . ~/.shell/variables

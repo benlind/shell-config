@@ -1,3 +1,5 @@
+# -*- mode: Shell-script -*-
+
 ##### ALIASES #####
 
 # Aliases
@@ -7,9 +9,9 @@ alias cdd="cd"
 alias cd..="cd .."
 alias cdd..="cd .."
 alias k="cd .."
-alias ls="ls -Ga --color=always"
-alias ll="ls -l --color=always"
-alias la="ls -a --color=always"
+alias ls="ls -Ga"
+alias ll="ls -l"
+alias la="ls -a"
 alias rm="rm -i"
 alias df="df -h"
 alias coda="open -a \"/Applications/Coda 2.app\""

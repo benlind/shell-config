@@ -1,3 +1,5 @@
+# -*- mode: Shell-script -*-
+
 export EDITOR="emacs"
 export CVSROOT="/var/lib/cvs"
 export CVSEDITOR="emacs"
