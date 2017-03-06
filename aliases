@@ -43,8 +43,10 @@ alias mig="rake db:migrate"
 # Git
 alias gb="git checkout -b"
 alias rp="script/plugin"
-alias gc="git commit -am"
-alias ga="git add ."
+alias gc="git add -A && git commit -m"
+alias gcm="git commit -m"
+alias ga="git add -A"
+alias gai="git add -i"
 alias gp="git push"
 alias gs="git status"
 
