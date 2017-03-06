@@ -3,6 +3,8 @@
 ##### ALIASES #####
 
 # Aliases
+alias em="emacs"          # standalone emacs (without server)
+alias e="emacsclient -t"  # connect to emacs server (or start new daemon)
 alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
 alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias cdd="cd"
@@ -19,7 +21,6 @@ alias waf=$PWD/waf
 alias despair="telnet 216.251.47.10 4000"
 alias kl="k && ls"
 alias findn='find . -name '"${1}"''
-alias em="emacs"
 alias ql="qlmanage -p 2>/dev/null" # quick look
 alias pmo="perl ~/Programming/Perl/pmo/pmo" # pmo program
 alias pmo-ql="qlmanage -p 2>/dev/null ~/Programming/Perl/pmo/pmo.png" # see pmo graph
