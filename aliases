@@ -27,6 +27,7 @@ alias pmo-ql="qlmanage -p 2>/dev/null ~/Programming/Perl/pmo/pmo.png" # see pmo 
 alias pmo-data="emacs ~/Programming/Perl/pmo/data.dat" # see pmo data file
 alias ws="workon still_got_it"
 alias tmux-sgi="~/scripts/tmux-sgi"
+alias psme="ps auxf --sort=start_time | grep $USER"
 
 # Rails
 alias rserv="script/server"
