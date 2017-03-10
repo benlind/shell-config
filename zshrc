@@ -48,10 +48,22 @@ bindkey '\ef' emacs-forward-word
 
 ##### General Config #####
 
-# Print fortune on new shell
-if command -v fortune >/dev/null 2>&1; then  # if fortune is a valid command
-    echo ""
-    fortune
+# Print `fortune | cowsay | lolcat` on new shell
+if command -v fortune >/dev/null 2>&1; then          # if fortune is installed
+    if command -v cowsay > /dev/null 2>&1; then      # if cowsay is installed
+        if command -v lolcat > /dev/null 2>&1; then  # if lolcat is installed
+            fortune | cowsay | lolcat
+        else
+            fortune | cowsay
+        fi
+    else
+        if command -v lolcat > /dev/null 2>&1; then  # if lolcat is installed
+            fortune | lolcat
+        else
+            fortune
+        fi
+    fi
+
     echo ""
 fi
 
