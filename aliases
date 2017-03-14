@@ -3,15 +3,17 @@
 ##### ALIASES #####
 
 # Aliases
+alias em="emacs"          # standalone emacs (without server)
+alias e="emacsclient -t"  # connect to emacs server (or start new daemon)
 alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
 alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias cdd="cd"
 alias cd..="cd .."
 alias cdd..="cd .."
 alias k="cd .."
-alias ls="ls -Ga"
-alias ll="ls -l"
-alias la="ls -a"
+alias ls="ls -Ga --color=always"
+alias ll="ls -lh --color=always"
+alias la="ls -a --color=always"
 alias rm="rm -i"
 alias df="df -h"
 alias coda="open -a \"/Applications/Coda 2.app\""
@@ -19,13 +21,13 @@ alias waf=$PWD/waf
 alias despair="telnet 216.251.47.10 4000"
 alias kl="k && ls"
 alias findn='find . -name '"${1}"''
-alias em="emacs"
 alias ql="qlmanage -p 2>/dev/null" # quick look
 alias pmo="perl ~/Programming/Perl/pmo/pmo" # pmo program
 alias pmo-ql="qlmanage -p 2>/dev/null ~/Programming/Perl/pmo/pmo.png" # see pmo graph
 alias pmo-data="emacs ~/Programming/Perl/pmo/data.dat" # see pmo data file
 alias ws="workon still_got_it"
 alias tmux-sgi="~/scripts/tmux-sgi"
+alias psme="ps auxf --sort=start_time | grep $USER"
 
 # Rails
 alias rserv="script/server"
@@ -42,8 +44,10 @@ alias mig="rake db:migrate"
 # Git
 alias gb="git checkout -b"
 alias rp="script/plugin"
-alias gc="git commit -am"
-alias ga="git add ."
+alias gc="git add -A && git commit -m"
+alias gcm="git commit -m"
+alias ga="git add -A"
+alias gai="git add -i"
 alias gp="git push"
 alias gs="git status"
 
