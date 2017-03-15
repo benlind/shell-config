@@ -15,9 +15,9 @@ alias k="cd .."
 alias cem="cd ~/.emacs.d"
 alias csh="cd ~/.shell"
 
-alias ls="ls -Ga --color=always"
-alias ll="ls -lh --color=always"
-alias la="ls -a --color=always"
+alias ls="ls -Ga"
+alias ll="ls -lh"
+alias la="ls -a"
 
 alias rm="rm -i"
 alias space="df -h"
