@@ -3,8 +3,9 @@
 ##### ALIASES #####
 
 # General
-alias em="emacs"          # standalone emacs (without server)
 alias e="emacsclient -t"  # connect to emacs server (or start new daemon)
+alias em="emacs"                          # standalone emacs (without server)
+alias ek="emacsclient -e '(kill-emacs)'"  # kill the emacs server
 alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
 alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
 
@@ -48,7 +49,7 @@ alias rat="RSPEC=true autotest"
 alias mig="rake db:migrate"
 
 # Git
-alias gb="git checkout -b"
+alias gb="git branch"
 alias rp="script/plugin"
 alias gc="git add -A && git commit -m"
 alias gcm="git commit -m"
@@ -56,8 +57,15 @@ alias ga="git add -A"
 alias gai="git add -i"
 alias gp="git push"
 alias gs="git status"
+alias gd="git diff --no-prefix"
+alias gdh="gd HEAD"
+alias gdh1="gd HEAD~1"
+alias gdh2="gd HEAD~2"
+alias gdh3="gd HEAD~3"
+alias gdh4="gd HEAD~4"
+alias gdh5="gd HEAD~5"
 
 # Python
-alias python='python3'
-alias pip='pip3'
-alias pm='python manage.py'
+# alias python='python3'
+# alias pip='pip3'
+# alias pm='python manage.py'
