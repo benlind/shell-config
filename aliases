@@ -4,6 +4,7 @@
 
 # General
 alias em="emacs"                          # standalone emacs (without server)
+alias e="emacs_mine"
 alias ek="emacsclient -e '(kill-emacs)'"  # kill the emacs server
 alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
 alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"

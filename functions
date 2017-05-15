@@ -84,7 +84,7 @@ mcd () {
     mkdir -p "$@" && cd "$@"
 }
 
-e () {
+emacs_mine () {
     file=$@
 
     # If the file is a Perl module path (Example::Module::Path), then
@@ -92,8 +92,9 @@ e () {
     if [[ $file == *"::"* ]]; then
         file=lib/${file//::/\/}.pm
 
-        # If this is a test module, look in the t/ library files.
-        if [[ $file =~ "\bTest\b" ]]; then
+        # If this is a test module, look in the t/ library files. Note, using
+        # regex-matching here (=~) causes zshell tab completion to crash.
+        if [[ $file == *"/Test/"* || $file == *"/Test.pm" ]]; then
             file=t/$file
         fi
     fi
