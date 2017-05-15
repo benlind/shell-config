@@ -83,3 +83,20 @@ fi
 mcd () {
     mkdir -p "$@" && cd "$@"
 }
+
+e () {
+    file=$@
+
+    # If the file is a Perl module path (Example::Module::Path), then
+    # prepend 'lib/', replace :: with /, and append '.pm'.
+    if [[ $file == *"::"* ]]; then
+        file=lib/${file//::/\/}.pm
+
+        # If this is a test module, look in the t/ library files.
+        if [[ $file =~ "\bTest\b" ]]; then
+            file=t/$file
+        fi
+    fi
+
+    emacsclient -t $file
+}

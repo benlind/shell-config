@@ -3,7 +3,6 @@
 ##### ALIASES #####
 
 # General
-alias e="emacsclient -t"  # connect to emacs server (or start new daemon)
 alias em="emacs"                          # standalone emacs (without server)
 alias ek="emacsclient -e '(kill-emacs)'"  # kill the emacs server
 alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
