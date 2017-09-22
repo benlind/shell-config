@@ -35,6 +35,16 @@ git_branch () {
     fi
 }
 
+git_add () {
+    if [[ $# -gt 0 ]]; then
+        # Passed some files to add individually
+        git add $@
+    else
+        # Add everything
+        git add -A
+    fi
+}
+
 short_dir ()
 {
     if [ "$PWD" = "$HOME" ]; then
@@ -90,7 +100,7 @@ emacs_mine () {
     # If the file is a Perl module path (Example::Module::Path), then
     # prepend 'lib/', replace :: with /, and append '.pm'.
     if [[ $file == *"::"* ]]; then
-        file=lib/${file//::/\/}.pm
+        file=lib/$(module_to_path $file)
 
         # If this is a test module, look in the t/ library files. Note, using
         # regex-matching here (=~) causes zshell tab completion to crash.
@@ -100,4 +110,10 @@ emacs_mine () {
     fi
 
     emacsclient -t $file
+}
+
+# Converts a Perl module string to a path
+# ("Some::Example::Module" => "Some/Example/Module.pm")
+module_to_path() {
+    echo ${1//::/\/}.pm
 }
