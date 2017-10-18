@@ -112,8 +112,21 @@ emacs_mine () {
     emacsclient -t $file
 }
 
-# Converts a Perl module string to a path
-# ("Some::Example::Module" => "Some/Example/Module.pm")
+# Converts a Perl module string to a path. Does nothing if the module is already
+# a path. The first parameter is the module string. The second parameter is a
+# string that will be prepended to the resulting path ONLY IF the first
+# parameter was a module and not already a path.
+#
+# $(module_to_path "Some::Example::Module" lib/)
+#     => "lib/Some/Example/Module.pm"
+#
+# $(module_to_path "bin/test.pl" lib/)
+#     => "bin/test.pl"
+#
 module_to_path() {
-    echo ${1//::/\/}.pm
+    if [[ $1 == *"::"* ]]; then
+        echo $2${1//::/\/}.pm
+    else
+        echo $1
+    fi
 }
