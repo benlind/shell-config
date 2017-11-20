@@ -3,11 +3,14 @@
 ##### ALIASES #####
 
 # General
-alias em="emacs"                          # standalone emacs (without server)
-alias e="emacs_mine"
+alias em="emacs_mine --no-server"  # standalone emacs (without server)
+alias e="emacs_mine --server"
 alias ek="emacsclient -e '(kill-emacs)'"  # kill the emacs server
 alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
 alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
+alias sali='source ~/.shell/aliases'
+alias sfun='source ~/.shell/functions'
+alias sfunc='sfun'
 
 alias cdd="cd"
 alias cd..="cd .."
@@ -65,8 +68,6 @@ alias gp="git push"
 alias gs="git status"
 alias gd="git diff --no-prefix"
 alias gds="gd --staged"
-alias glg='git log --no-merges --date=short --graph --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
-alias glf='glg --stat'  # "git log with files"
 alias dh="gd HEAD"
 alias d1="gd HEAD~1"
 alias d2="gd HEAD~2"
@@ -75,6 +76,14 @@ alias d4="gd HEAD~4"
 alias d5="gd HEAD~5"
 # Remove any checked out pu/* branches
 alias purm="git branch | grep -E '^\*?\s*pu/' | sed -re 's/^\*?\s*//g' | xargs git branch -D"
+
+# Git log
+my_git_log_opts='--no-merges --date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
+alias glg="git log $my_git_log_opts --graph"
+alias glf='glg --stat'  # "git log with files"
+# Versions with --reverse:
+alias glgr="git log $my_git_log_opts --reverse"  # can't use --graph with --reverse
+alias glfr='glgr --stat'
 
 # Python
 # alias python='python3'

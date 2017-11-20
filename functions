@@ -95,7 +95,8 @@ mcd () {
 }
 
 emacs_mine () {
-    file=$@
+    server_flag=$1
+    file=$2
 
     # If the file is a Perl module path (Example::Module::Path), then
     # prepend 'lib/', replace :: with /, and append '.pm'.
@@ -109,7 +110,14 @@ emacs_mine () {
         fi
     fi
 
-    emacsclient -t $file
+    if [[ "$server_flag" == "--no-server" ]]; then
+        emacs $file
+    elif [[ "$server_flag" == "--server" ]]; then
+        emacsclient -t $file
+    else
+        echo 'no server flag passed'
+        return 1
+    fi
 }
 
 # Converts a Perl module string to a path. Does nothing if the module is already
