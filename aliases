@@ -3,11 +3,14 @@
 ##### ALIASES #####
 
 # General
-alias em="emacs"                          # standalone emacs (without server)
-alias e="emacs_mine"
+alias em="emacs_mine --no-server"  # standalone emacs (without server)
+alias e="emacs_mine --server"
 alias ek="emacsclient -e '(kill-emacs)'"  # kill the emacs server
 alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
 alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
+alias sali='source ~/.shell/aliases'
+alias sfun='source ~/.shell/functions'
+alias sfunc='sfun'
 
 alias cdd="cd"
 alias cd..="cd .."
