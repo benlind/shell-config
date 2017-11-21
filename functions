@@ -138,3 +138,8 @@ module_to_path() {
         echo $1
     fi
 }
+
+# Shows the commits (with patches) since the passed commit hash (inclusive).
+gsince() {
+    git log --reverse --patch $1^..HEAD
+}
