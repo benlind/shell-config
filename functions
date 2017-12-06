@@ -98,16 +98,22 @@ emacs_mine () {
     server_flag=$1
     file=$2
 
-    # If the file is a Perl module path (Example::Module::Path), then
-    # prepend 'lib/', replace :: with /, and append '.pm'.
-    if [[ $file == *"::"* ]]; then
-        file=lib/$(module_to_path $file)
+    file=$(module_to_path $file lib/)
 
-        # If this is a test module, look in the t/ library files. Note, using
-        # regex-matching here (=~) causes zshell tab completion to crash.
-        if [[ $file == *"/Test/"* || $file == *"/Test.pm" ]]; then
-            file=t/$file
-        fi
+    # If this is a test module, look in the t/ library files. Note, using
+    # regex-matching here (=~) causes zshell tab completion to crash.
+    if [[                               \
+           $file == *"/Test/"*          \
+        || $file == *"/Test.pm"         \
+        || $file == "lib/API/"*         \
+        || $file == "lib/Integration/"* \
+        || $file == "lib/Regression/"*  \
+        || $file == "lib/Smoke/"*       \
+        || $file == "lib/Unit/"*        \
+        || $file == "lib/Web/"*         \
+    ]]; then
+        # Replace 'lib/' with 't/tests/'
+        file=${file/lib\//t\/tests\/}
     fi
 
     if [[ "$server_flag" == "--no-server" ]]; then
