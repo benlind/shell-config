@@ -94,38 +94,6 @@ mcd () {
     mkdir -p "$@" && cd "$@"
 }
 
-emacs_mine () {
-    server_flag=$1
-    file=$2
-
-    file=$(module_to_path $file lib/)
-
-    # If this is a test module, look in the t/ library files. Note, using
-    # regex-matching here (=~) causes zshell tab completion to crash.
-    if [[                               \
-           $file == *"/Test/"*          \
-        || $file == *"/Test.pm"         \
-        || $file == "lib/API/"*         \
-        || $file == "lib/Integration/"* \
-        || $file == "lib/Regression/"*  \
-        || $file == "lib/Smoke/"*       \
-        || $file == "lib/Unit/"*        \
-        || $file == "lib/Web/"*         \
-    ]]; then
-        # Replace 'lib/' with 't/tests/'
-        file=${file/lib\//t\/tests\/}
-    fi
-
-    if [[ "$server_flag" == "--no-server" ]]; then
-        emacs $file
-    elif [[ "$server_flag" == "--server" ]]; then
-        emacsclient -t $file
-    else
-        echo 'no server flag passed'
-        return 1
-    fi
-}
-
 # Converts a Perl module string to a path. Does nothing if the module is already
 # a path. The first parameter is the module string. The second parameter is a
 # string that will be prepended to the resulting path ONLY IF the first
