@@ -75,6 +75,7 @@ alias d4="gd HEAD~4"
 alias d5="gd HEAD~5"
 # Remove any checked out pu/* branches
 alias purm="git branch | grep -E '^\*?\s*pu/' | sed -re 's/^\*?\s*//g' | xargs git branch -D"
+alias co="gco"
 
 # Git log
 my_git_log_opts='--no-merges --date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
