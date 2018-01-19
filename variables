@@ -14,3 +14,5 @@ export ALTERNATE_EDITOR=""
 # Colorize ls (must be combined with `ls --color=always` in iTerm on a server)
 export CLICOLOR='true'
 export LSCOLORS="gxfxcxdxbxegedabagacad"
+
+export LESS=-RMisnf
