@@ -11,6 +11,9 @@ alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias sali='source ~/.shell/aliases'
 alias sfun='source ~/.shell/functions'
 alias sfunc='sfun'
+# Something was overwriting this with an `alias` call, which meant I could
+# `which some_func` to see the function definition:
+alias which='which'
 
 alias cdd="cd"
 alias cd..="cd .."
@@ -42,6 +45,8 @@ alias psme="ps auxf --sort=start_time | grep -E 'blind|^USER'"
 
 alias eali="e ~/.shell/aliases"
 alias sali="source ~/.shell/aliases"
+
+alias ackl="ack_lib"
 
 # Rails
 alias rserv="script/server"

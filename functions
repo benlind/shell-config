@@ -117,3 +117,8 @@ module_to_path() {
 gsince() {
     git log --reverse --patch $1^..HEAD
 }
+
+# Run ack in the lib directory
+ack_lib() {
+    ack $@ lib
+}
