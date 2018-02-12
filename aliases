@@ -78,6 +78,8 @@ alias d5="gd HEAD~5"
 # Remove any checked out pu/* branches
 alias purm="git branch | grep -E '^\*?\s*pu/' | sed -re 's/^\*?\s*//g' | xargs git branch -D"
 alias co="gco"
+# Show all the files in this repo that I added
+alias files_i_created='git log --name-status --diff-filter=A --format="> %aN" --author="ben" | ack "^A\t" | sed -re "s/^A\t//g"'
 
 # Git log
 my_git_log_opts='--no-merges --date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
