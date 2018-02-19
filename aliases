@@ -85,6 +85,8 @@ alias purm="git branch | grep -E '^\*?\s*pu/' | sed -re 's/^\*?\s*//g' | xargs g
 alias co="gco"
 # Show all the files in this repo that I added
 alias files_i_created='git log --name-status --diff-filter=A --format="> %aN" --author="ben" | ack "^A\t" | sed -re "s/^A\t//g"'
+alias wip='ga && gcam "WIP"'
+alias unwip='git_reset_wip'
 
 # Git log
 my_git_log_opts='--no-merges --date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
