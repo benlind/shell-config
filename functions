@@ -2,6 +2,20 @@
 
 ##### Functions #####
 
+emacs_mine () {
+    server_flag=$1
+    file=$2
+
+    if [[ "$server_flag" == "--no-server" ]]; then
+        emacs $file
+    elif [[ "$server_flag" == "--server" ]]; then
+        emacsclient -t $file
+    else
+        echo 'no server flag passed'
+        return 1
+    fi
+}
+
 # 'up [string]' takes you up to a directory that matches /string/
 # [blind ~/test#trunk/lib/Test/Module/Notes]$ up trunk
 # [blind ~/test#trunk]$
