@@ -89,7 +89,7 @@ alias wip='ga && gcam "WIP"'
 alias unwip='git_reset_wip'
 
 # Git log
-my_git_log_opts='--no-merges --date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
+my_git_log_opts='--date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
 alias glg="git log $my_git_log_opts --graph"
 alias glf='glg --stat'  # "git log with files"
 # Versions with --reverse:
