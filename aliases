@@ -86,6 +86,7 @@ alias co="gco"
 # Show all the files in this repo that I added
 alias files_i_created='git log --name-status --diff-filter=A --format="> %aN" --author="ben" | ack "^A\t" | sed -re "s/^A\t//g"'
 alias wip='ga && gcam "WIP"'
+alias gwip='ga && gcam "WIP"'
 alias unwip='git_reset_wip'
 
 # Git log
