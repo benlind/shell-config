@@ -88,6 +88,8 @@ alias files_i_created='git log --name-status --diff-filter=A --format="> %aN" --
 alias wip='ga && gcam "WIP"'
 alias gwip='ga && gcam "WIP"'
 alias unwip='git_reset_wip'
+alias gco-='git checkout -- "*"'
+alias g-='gco-'
 
 # Git log
 my_git_log_opts='--date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
