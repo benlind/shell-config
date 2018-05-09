@@ -140,7 +140,7 @@ ack_lib() {
 # Reset the last commit if it's a WIP commit
 git_reset_wip() {
     last_msg=`git log -1 --pretty=%B`
-    if [[ $last_msg == "WIP" ]]; then
+    if [[ $last_msg == *"WIP" ]]; then
         git reset --soft HEAD~1
         return 0
     else
