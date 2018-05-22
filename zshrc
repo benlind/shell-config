@@ -56,10 +56,15 @@ bindkey '\ef' emacs-forward-word
 # Print `fortune | cowsay | lolcat` on new shell
 if command -v fortune >/dev/null 2>&1; then          # if fortune is installed
     if command -v cowsay > /dev/null 2>&1; then      # if cowsay is installed
+
+        # Choose a random cowfile for cowsay
+        cowfiles=( $(cowsay -l | sed "1 d") )
+        cowfile=${cowfiles[$(($RANDOM % ${#cowfiles[*]}))]}
+
         if command -v lolcat > /dev/null 2>&1; then  # if lolcat is installed
-            fortune | cowsay | lolcat
+            fortune | cowsay -f "$cowfile" | lolcat
         else
-            fortune | cowsay
+            fortune | cowsay -f "$cowfile"
         fi
     else
         if command -v lolcat > /dev/null 2>&1; then  # if lolcat is installed
