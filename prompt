@@ -1,23 +1,10 @@
 # -*- mode: Shell-script -*-
 
-# Most of this file is currently unused because I'm using Liquid Prompt to have
-# a shell-independent prompt (https://github.com/nojhan/liquidprompt). To
-# customize the prompt, edit ~/.config/liquidpromptrc.
-# [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+# I am using the agnoster oh-my-zsh theme, which has its own prompt. This file
+# contains further customizations on top of it.
 
-
-
-# if [ -n "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
-#     # We are probably using zsh
-#     # (http://stackoverflow.com/questions/9910966/how-to-tell-if-its-using-zsh-or-bash)
-
-#     # Do something for zsh here
-# else  # [ -n "`$SHELL -c 'echo $BASH_VERSION'`" ]; then
-#     # We are probably using bash or something else
-#     PS1='\[\e]0;\u@\h:\w\007\][$(date +%H:%M)]-[\u@\h: \[\e[0;32m\]\w\[\e[0m\]\[\e[0;36m\] ${GIT_BRANCH}\[\e[0;00m\]]\$ '
-# fi
-
-# # PROMPT_COMMAND=$'GIT_BRANCH=$(git_branch)'
-# # export PROMPT_COMMAND
-
-# export PS1
+# Add the time to the right prompt
+build_right_prompt() {
+  echo -n "$(date '+%X ')"
+}
+RPROMPT='$(build_right_prompt)'
