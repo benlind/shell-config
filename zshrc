@@ -53,6 +53,10 @@ bindkey '\ef' emacs-forward-word
 
 ##### General Config #####
 
+# Use my cowfiles. I filtered out some weird ones and added more from the
+# netterwebs.
+export COWPATH="$(dirname "$0")/cowfiles"
+
 # Print `fortune | cowsay | lolcat` on new shell
 if command -v fortune >/dev/null 2>&1; then          # if fortune is installed
     if command -v cowsay > /dev/null 2>&1; then      # if cowsay is installed
