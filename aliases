@@ -48,6 +48,8 @@ alias sali="source ~/.shell/aliases"
 
 alias ackl="ack_lib"
 
+alias links="ls -l node_modules | grep ^l" # list yarn-linked packages
+
 # Rails
 alias rserv="script/server"
 alias rs="rails server"
