@@ -18,6 +18,7 @@ alias which='which'
 alias cdd="cd"
 alias cd..="cd .."
 alias cdd..="cd .."
+alias c-="cd -"
 alias k="cd .."
 alias cem="cd ~/.emacs.d"
 alias csh="cd ~/.shell"
