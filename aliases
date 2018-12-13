@@ -26,7 +26,7 @@ alias csh="cd ~/.shell"
 alias ls="ls -Ga"
 alias ll="ls -lh"
 alias la="ls -a"
-alias tree="tree -fiC"
+alias treep="tree -fiC" # "TREE with Path"
 
 alias rm="rm -i"
 alias space="df -h"
