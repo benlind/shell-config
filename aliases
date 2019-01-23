@@ -92,7 +92,7 @@ alias files_i_created='git log --name-status --diff-filter=A --format="> %aN" --
 alias wip='ga && gcam "WIP"'
 alias gwip='ga && gcam "WIP"'
 alias unwip='git_reset_wip'
-alias gco-='git checkout -- "*"'
+alias gco-='git_clear_changes'
 alias g-='gco-'
 
 # Git log

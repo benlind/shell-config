@@ -148,3 +148,13 @@ git_reset_wip() {
         return 1
     fi
 }
+
+git_clear_changes () {
+    if [[ $# -gt 0 ]]; then
+        # Passed some files to clear individually
+        git checkout -- "$@"
+    else
+        # Add everything
+        git checkout -- "*"
+    fi
+}
