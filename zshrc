@@ -21,6 +21,10 @@ HIST_STAMPS="yyyy-mm-dd"
 DISABLE_UPDATE_PROMPT=true  # Auto-update
 
 # Improve startup time (https://superuser.com/a/274985/536749)
+#
+# Here are some other things to improve startup:
+#  - git config --global --add oh-my-zsh.hide-status 1
+#  - mv ~/.zsh_history zsh_history_backup
 skip_global_compinit=1
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
