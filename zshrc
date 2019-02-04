@@ -51,31 +51,9 @@ bindkey '\ef' emacs-forward-word
 
 ##### General Config #####
 
-# Use my cowfiles. I filtered out some weird ones and added more from the
-# netterwebs.
-export COWPATH="$(dirname "$0")/cowfiles"
-
-# Print `fortune | cowsay | lolcat` on new shell
+# Print `fortune` on new shell
 if command -v fortune >/dev/null 2>&1; then          # if fortune is installed
-    if command -v cowsay > /dev/null 2>&1; then      # if cowsay is installed
-
-        # Choose a random cowfile for cowsay
-        cowfiles=( $(cowsay -l | sed "1 d") )
-        cowfile=${cowfiles[$(($RANDOM % ${#cowfiles[*]}))]}
-
-        if command -v lolcat > /dev/null 2>&1; then  # if lolcat is installed
-            fortune | cowsay -f "$cowfile" | lolcat
-        else
-            fortune | cowsay -f "$cowfile"
-        fi
-    else
-        if command -v lolcat > /dev/null 2>&1; then  # if lolcat is installed
-            fortune | lolcat
-        else
-            fortune
-        fi
-    fi
-
+    fortune
     echo ""
 fi
 
