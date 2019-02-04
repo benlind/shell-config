@@ -90,3 +90,6 @@ if hash complete 2>/dev/null; then
 fi
 
 unsetopt nomatch  # get globs to work with `git add`
+
+# Lazy-load NVM for faster startup
+. ~/.shell/lazynvm
