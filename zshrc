@@ -2,11 +2,6 @@
 
 ##### Oh-my-zsh config #####
 
-### TODO
-# - Modify the `ga` alias: if I pass a filename, add ONLY that file
-#   (`ga file.txt` = `git add file.txt`). Otherwise add ALL files
-#   (`ga` = `git add -A`).
-
 # Path to your oh-my-zsh installation.
 export ZSH=${HOME}/.oh-my-zsh
 
