@@ -3,8 +3,16 @@
 # I am using the agnoster oh-my-zsh theme, which has its own prompt. This file
 # contains further customizations on top of it.
 
-# Add the time to the right prompt
-build_right_prompt() {
-  echo -n "$(date '+%X ')"
-}
-RPROMPT='$(build_right_prompt)'
+################################################################################
+# Right Prompt
+#
+# I removed the RPROMPT because it made copying and pasting commands and output
+# from the terminal annoying. Also, you can just use `history` to see the time
+# of each command.
+
+# # Add the time to the right prompt
+# build_right_prompt() {
+#   echo -n "$(date '+%X ')"
+# }
+# RPROMPT='$(build_right_prompt)'
+################################################################################
