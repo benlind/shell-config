@@ -52,6 +52,10 @@ alias a="ack"
 
 alias links="ls -l node_modules | grep ^l" # list yarn-linked packages
 
+# Yarn
+alias yuw='yarn test:unit --watch'
+alias s='yarn serve'
+
 # Rails
 alias rserv="script/server"
 alias rs="rails server"
