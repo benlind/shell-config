@@ -102,6 +102,7 @@ alias g-='gco-'
 alias show='git show'
 alias m='git checkout master'
 alias gml='git checkout master && git pull'
+alias ml='gml'
 
 # Git log
 my_git_log_opts='--date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
