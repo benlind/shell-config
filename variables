@@ -2,10 +2,10 @@
 
 export EDITOR="emacs"
 export CVSROOT="/var/lib/cvs"
-export CVSEDITOR="emacs"
+export CVSEDITOR="emacs -q"
 export CVS_RSH="ssh"
 export SVKROOT="/var/lib/svk"
-export SVN_EDITOR="emacs"
+export SVN_EDITOR="emacs -q"
 
 # Empty alternate editor so that `emacsclient -t` automatically starts the emacs
 # daemon if it isn't running (http://stackoverflow.com/a/5578718/1054633).
