@@ -42,6 +42,7 @@ alias pmo-data="emacs ~/Programming/Perl/pmo/data.dat" # see pmo data file
 
 alias ws="workon still_got_it"
 alias tmux-sgi="~/scripts/tmux-sgi"
+alias ta="tmux attach || tmux"
 alias psme="ps auxf --sort=start_time | grep -E 'blind|^USER'"
 
 alias eali="e ~/.shell/aliases"
@@ -55,6 +56,7 @@ alias links="ls -l node_modules | grep ^l" # list yarn-linked packages
 # Yarn
 alias yuw='yarn test:unit --watch'
 alias s='yarn serve'
+alias ys='yarn && s'
 
 # Rails
 alias rserv="script/server"
@@ -95,7 +97,10 @@ alias co="gco"
 # Show all the files in this repo that I added
 alias files_i_created='git log --name-status --diff-filter=A --format="> %aN" --author="ben" | ack "^A\t" | sed -re "s/^A\t//g"'
 alias wip='ga && gcam "WIP"'
-alias unwip='git_reset_wip'
+alias unwip='git_reset_wip && gs'
+alias uw='unwip'
+alias uwr='unwip && grh'
+alias unwipr='uwr'
 alias rewip='unwip && wip'
 alias gco-='git_clear_changes'
 alias g-='gco-'
@@ -103,6 +108,7 @@ alias show='git show'
 alias m='git checkout master'
 alias gml='git checkout master && git pull'
 alias ml='gml'
+alias c='git checkout'
 
 # Git log
 my_git_log_opts='--date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
