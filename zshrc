@@ -18,7 +18,8 @@ DEFAULT_USER="benlind"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
-DISABLE_UPDATE_PROMPT=true  # Auto-update
+# DISABLE_UPDATE_PROMPT=true  # Always auto-update
+DISABLE_AUTO_UPDATE=true  # Never auto-update
 
 # Improve startup time (https://superuser.com/a/274985/536749)
 #
