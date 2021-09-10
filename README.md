@@ -14,16 +14,19 @@ improve as you see fit.
 
 ### Installing ZSH
 
-Clone this project onto your hard drive (e.g., to `~/.shell`). Make sure you
-install Oh My Zsh before creating the below `~/.zshrc` file.
+Clone this project onto your hard drive (e.g., to `~/.shell`):
 
-Create `~/.zshrc` with the following content:
+```
+git clone git@github.com:benlind/shell-config.git ~/.shell
+```
+
+Make sure you install Oh My Zsh first, and then create `~/.zshrc` with the following content:
 
 ```
 source ~/.shell/zshrc
 ```
 
-If necessary, create `~/.bash_profile` with the following content:
+If necessary (only on old versions of macOS), create `~/.bash_profile` with the following content:
 
 ```
 # Use ZSH
@@ -41,4 +44,4 @@ can install just the fonts by running this:
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 ```
 
-Then set your terminal font to Meslo.
+Then set your terminal font to Meslo in the Profiles. See [this page](https://github.com/ryanoasis/nerd-fonts/wiki/FAQ-and-Troubleshooting#what-do-these-acronym-variations-in-the-font-name-mean-lg-l-m-s-dz-sz) for what LG, L, M, S, and DZ mean. I chose "Meslo LG L for Powerline" which has a larger line height. That makes the triangle separators not bleed through into the above/below lines.
