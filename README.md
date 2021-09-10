@@ -45,3 +45,7 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 ```
 
 Then set your terminal font to Meslo in the Profiles. See [this page](https://github.com/ryanoasis/nerd-fonts/wiki/FAQ-and-Troubleshooting#what-do-these-acronym-variations-in-the-font-name-mean-lg-l-m-s-dz-sz) for what LG, L, M, S, and DZ mean. I chose "Meslo LG L for Powerline" which has a larger line height. That makes the triangle separators not bleed through into the above/below lines.
+
+### Autosuggestions
+
+[Installation instructions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md). Specifically you need to clone the autosuggestions directory, since zsh-autosuggestions is already added to our the zshrc file in this repo.
