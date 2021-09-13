@@ -72,7 +72,8 @@ lrwxr-xr-x  1 $USER-admin  staff  39 Sep 10 14:16 /usr/local/share/zsh/site-func
 The easiest way to solve this is to change the ownership of that zsh directory to be the non-admin user:
 
 ```
-compaudit
+compaudit # get list of directories - the following commands assume these all fall under /usr/local/share/zsh
 su $USER-admin
 sudo chown -R $USER:staff /usr/local/share/zsh
+sudo chmod -R 755 /usr/local/share/zsh
 ```
