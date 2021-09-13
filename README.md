@@ -64,16 +64,16 @@ When launching oh-my-zsh you may get warnings like this:
 
 ```
 [oh-my-zsh] Insecure completion-dependent directories detected:
-drwxr-xr-x  3 $USER-admin  staff  96 Sep 10 13:53 /usr/local/share/zsh
-drwxr-xr-x  3 $USER-admin  staff  96 Sep 10 14:16 /usr/local/share/zsh/site-functions
-lrwxr-xr-x  1 $USER-admin  staff  39 Sep 10 14:16 /usr/local/share/zsh/site-functions/_brew -> ../../../Homebrew/completions/zsh/_brew
+drwxr-xr-x  3 blind-admin  staff  96 Sep 10 13:53 /usr/local/share/zsh
+drwxr-xr-x  3 blind-admin  staff  96 Sep 10 14:16 /usr/local/share/zsh/site-functions
+lrwxr-xr-x  1 blind-admin  staff  39 Sep 10 14:16 /usr/local/share/zsh/site-functions/_brew -> ../../../Homebrew/completions/zsh/_brew
 ```
 
 The easiest way to solve this is to change the ownership of that zsh directory to be the non-admin user:
 
 ```
 compaudit # get list of directories - the following commands assume these all fall under /usr/local/share/zsh
-su $USER-admin
-sudo chown -R $USER:staff /usr/local/share/zsh
+su blind-admin
+sudo chown -R blind:staff /usr/local/share/zsh
 sudo chmod -R 755 /usr/local/share/zsh
 ```
