@@ -20,18 +20,10 @@ Clone this project onto your hard drive (e.g., to `~/.shell`):
 git clone git@github.com:benlind/shell-config.git ~/.shell
 ```
 
-Make sure you install Oh My Zsh first, and then create `~/.zshrc` with the following content:
+Make sure you install Oh My Zsh first, and then overwrite `~/.zshrc`:
 
 ```
-source ~/.shell/zshrc
-```
-
-If necessary (only on old versions of macOS), create `~/.bash_profile` with the following content:
-
-```
-# Use ZSH
-export SHELL=/bin/zsh
-exec /bin/zsh -l
+echo "source ~/.shell/zshrc" > ~/.zshrc
 ```
 
 ### ZSH Theme
