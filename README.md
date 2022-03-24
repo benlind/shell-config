@@ -12,7 +12,7 @@ improve as you see fit.
 3. [Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html) (built into macOS now)
 4. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) (you can use the [manual installation](https://github.com/robbyrussell/oh-my-zsh#manual-installation) if there are firewall issues)
 
-### Installing ZSH
+### Installation
 
 Clone this project onto your hard drive (e.g., to `~/.shell`):
 
