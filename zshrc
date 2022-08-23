@@ -8,7 +8,7 @@ export ZSH=${HOME}/.oh-my-zsh
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/. Optionally, if
 # you set this to "random", it'll load a random theme each time that oh-my-zsh
 # is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Hide the “user@hostname” info when you're logged in as yourself on your local
 # machine (for agnoster theme)
