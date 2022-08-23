@@ -9,7 +9,7 @@ improve as you see fit.
 
 1. XCode command line tools (to install, just try to run a git command)
 2. [Homebrew](brew.sh)
-3. [Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html) (built into macOS now)
+3. [Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html)
 4. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) (you can use the [manual installation](https://github.com/robbyrussell/oh-my-zsh#manual-installation) if there are firewall issues)
 
 ### Installing ZSH
