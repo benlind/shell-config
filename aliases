@@ -56,6 +56,7 @@ alias links="ls -l node_modules | grep ^l" # list yarn-linked packages
 # Yarn
 alias yuw='yarn test:unit --watch'
 alias s='yarn serve'
+alias y='yarn'
 alias ys='yarn && s'
 
 # Rails
@@ -105,11 +106,11 @@ alias rewip='unwip && wip'
 alias gco-='git_clear_changes'
 alias g-='gco-'
 alias show='git show'
-alias m='git checkout master'
-alias gml='git checkout master && git pull'
+alias m='git checkout $(git_main_branch)'
+alias gml='git checkout $(git_main_branch) && git pull'
 alias ml='gml'
 alias c='git checkout'
-alias gmm='git merge master'
+alias gmm='git merge $(git_main_branch)'
 
 # Git log
 my_git_log_opts='--date=short --pretty="%Cred%h %Cgreen%an %Cblue%ad (%ar) %Creset%n%s%n%+b"'
