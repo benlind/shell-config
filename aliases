@@ -54,6 +54,8 @@ alias a="ack"
 alias links="ls -l node_modules | grep ^l" # list yarn-linked packages
 
 # Yarn
+alias ytu='yarn test:unit'
+alias yut='ytu'
 alias yuw='yarn test:unit --watch'
 alias s='yarn serve'
 alias y='yarn'
