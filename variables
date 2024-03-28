@@ -1,6 +1,8 @@
 # -*- mode: Shell-script -*-
 
-export EDITOR="emacs -nw -q"
+# Use this for emacs:
+# export EDITOR="emacs -nw -q"
+export EDITOR="code --wait"
 export CVSROOT="/var/lib/cvs"
 export CVSEDITOR="emacs -q"
 export CVS_RSH="ssh"
