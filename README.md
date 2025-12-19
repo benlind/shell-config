@@ -11,6 +11,7 @@ improve as you see fit.
 2. [Homebrew](brew.sh)
 3. [Zsh](http://sourabhbajaj.com/mac-setup/iTerm/zsh.html)
 4. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) (you can use the [manual installation](https://github.com/robbyrussell/oh-my-zsh#manual-installation) if there are firewall issues)
+5. [fzf](https://github.com/junegunn/fzf) (for Ctrl-R interactive fuzzy history search)
 
 ### Installation
 
